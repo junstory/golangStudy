@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/junstory/golangStudy"
 )
 
 // func test() {
@@ -10,7 +12,7 @@ import (
 
 func main() {
 	defer fmt.Println("프로그램이 종료되었습니다.")
-
+	fmt.Println(golangStudy.IsPrime(3))
 	test1 := "Hello \nWorld"
 	test2 := `Hello \nWorld`
 

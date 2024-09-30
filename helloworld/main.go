@@ -10,6 +10,13 @@ import (
 
 func main() {
 	defer fmt.Println("프로그램이 종료되었습니다.")
+
+	test1 := "Hello \nWorld"
+	test2 := `Hello \nWorld`
+
+	fmt.Println(test1)
+	fmt.Println(test2)
+
 	var num1 int
 	var num2 int
 	var op string

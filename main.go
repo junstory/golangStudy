@@ -1,4 +1,4 @@
-package ex3
+package golangStudy
 
 func IsPrime(n int) bool {
 	if n <= 1 {

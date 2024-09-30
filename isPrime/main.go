@@ -5,7 +5,7 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/junstory/golangStudy"
+	"github.com/junstory/golangStudy/ex3"
 	"github.com/otiai10/primes"
 )
 
@@ -22,5 +22,5 @@ func main() {
 	}
 	f := primes.Factorize(int64(number))
 	fmt.Println("primes:", len(f.Powers()) == 1)
-	fmt.Println("IsPrime:", golangStudy.IsPrime(number))
+	fmt.Println("IsPrime:", ex3.IsPrime(number))
 }

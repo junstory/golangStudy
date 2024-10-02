@@ -10,7 +10,7 @@ func main() {
 	var num1 int
 	var num2 int
 	var op string
-
+	fmt.Println("24 45 47 50 54 76 94")
 	fmt.Println("Calculator")
 	fmt.Println("첫 번째 숫자 입력: ")
 	fmt.Scan(&num1)

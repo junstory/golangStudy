@@ -1,19 +1,23 @@
-package golangStudy
+package main
 
-func IsPrime(n int) bool {
-	if n <= 1 {
-		return false
-	} else if n <= 3 {
-		return true
-	} else if n%2 == 0 || n%3 == 0 {
-		return false
-	}
-	i := 5
-	for i*i < n {
-		if n%i == 0 || n%(i+2) == 0 {
-			return false
-		}
-		i += 6
-	}
-	return true
+// #cgo CFLAGS: -O0
+// #cgo LDFLAGS: -L. -lcstring_concat
+// char* string_concat(char*, char*);
+// #include <stdlib.h>
+import "C"
+import (
+	"fmt"
+	"unsafe"
+)
+
+func main() {
+	a := C.CString("Hello")
+	b := C.CString("World")
+	ret := (C.string_concat(a, b))
+	goRet := C.GoString(ret)
+	fmt.Println(goRet)
+	C.free(unsafe.Pointer(a))
+	C.free(unsafe.Pointer(b))
+	C.free(unsafe.Pointer(ret))
+	//fmt.Println(C.fibo(C.int(10)))
 }
